@@ -47,7 +47,7 @@ export function inheritInjected(componentOptions: ComponentOptions<Vue>) {
     componentOptions.inject = componentOptions.inject || {}
     componentOptions.inject[reactiveInjectKey] = {
       from: reactiveInjectKey,
-      default: {},
+      default: () => ({}),
     }
   }
 }
